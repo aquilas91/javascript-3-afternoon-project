@@ -49,7 +49,14 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
+fuction employeeUpdater(){
+if(employees.firstName==='Theo'){ delete employees.firstName}
+else if(employees.firstName==='Lorie'){
+  employees.department= 'HR'
+  }
+return employees;
 
+};
 //Code Here
 
 
@@ -70,7 +77,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+function removeDuplicates(arr){
 
+  for (var i=0; i<arr.length; i++ ){
+    for (var j=0; j<arr[i].length; j++){
+      if( arr[i]=arr[j]){
+        delete workplaceAccidents[i];
+      }
+     
+    }
+  }
+  return arr
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -97,10 +115,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
-
-
+var grumpyActivity=cat.catFriends[1].activities;
+var fluffy2ndFriend=cat.catFriends[1].name;
 
 ////////// PROBLEM 4 //////////
 
@@ -137,7 +153,16 @@ var myCar = {
     2. Loop over the accidents array.
     3. Change atFaultForAccident from true to false.
 */
+function recordCleaner(myCar){
+  for (var i=0; i < myCar.accidents.length; i++ ){
+    if(myCar.accidents[i].atFaultForAccident==='true'){
+      myCar.accidents[i].atFaultForAccident==='false'
 
+    }
+  }
+  return myCar;
+
+}
 //Code Here
 
 
@@ -156,7 +181,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
 */
-
+function looper(arr){
+  for (var i=0; i<arr.length; i++ ){
+    for (var j=0; j<arr[i].length; j++){
+      if( arr[i][j]%2===0){ 
+        return 'Even'} else{
+          return 'odd'
+        }
+      }
+    }
+}
 //Code Here
 
 
