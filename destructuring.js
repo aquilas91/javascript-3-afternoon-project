@@ -20,7 +20,7 @@ var carDetails = {
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
-
+const {color,make, model,year}=carDetails;
 //Code Here
 
 
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName,  lastName, title}=obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,8 +54,17 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+function totalPopulation(object){
+ 
+};
+var object={
+  utah:1,
+  california:2,
+  texas:3,
+  arizona:4
+}
+const { utah, california, texas, arizona}=object;
+console.log(utah+california+texas+arizona);
 
 ////////// PROBLEM 4 //////////
 
@@ -69,7 +78,19 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients ( object ){
 
+}
+var object ={
+  carb:'20g',
+  fat : '2g',
+  protein:'100'
+
+};
+const {carb,protein,fat}=object;
+let array=[];
+const newArr=array.push(object);
+console.log(array);
 
 ////////// PROBLEM 5 //////////
 
@@ -84,6 +105,17 @@ function greeting( obj ) {
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
+function largeNumbers(object){
+      if(object.first<object.second && object.first<object.third){  
+        return object.first}else if(object.second<object.first && object.second<object.third){
+           return object.second }else {
+             return object.third;}
+};
+const object={
+ first:1,
+ second:2,
+ third:3
+}
 
 //Code Here
 
@@ -96,6 +128,20 @@ function greeting( obj ) {
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
+function numberGroups(object){
+  for (let key in object){
+    if(object.a.length < object.b.length && object.a.length <object.c.length){  
+      return object.a.length}else if(object.b.length<object.a.length && object.b.length<object.c.length){
+         return object.b.length}else {
+           return object.c.length;}
+
+  }
+}
+object={
+  a:[],
+  b:[],
+  c:[]
+}
 
 //Code Here
 

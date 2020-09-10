@@ -40,7 +40,10 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  for(let key in obj){
+    obj[key];
+  }
+  return key;
 }
 
 
@@ -53,9 +56,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
-
-
+  function greaterThan10(object){
+    for(let key in object){
+      if ( object.key>'10')
+      object[key]='0';
+    }
+  
+console.log(object);
+  }
 
 ////////// PROBLEM 3 //////////
 
@@ -67,8 +75,13 @@ function showValues( obj ) {
 
 //Code Here
 
+function double(object){
+  for(let key in object){
+    object[key]=key*2
+  }
 
-
+console.log(object);
+}
 ////////// PROBLEM 4 //////////
 
 /*
@@ -80,7 +93,15 @@ function showValues( obj ) {
 */
 
 //Code Here
+function secrets(object){
+  for(let key in object){
+    if(object.include('sh')){
+      object.key='sh';
+    }
 
+  }
+  return 
+}
 
 
 /* 
@@ -109,7 +130,10 @@ function showValues( obj ) {
   Write a function called removePassword that takes in an object.
   Delete the property password and return the object.
 */
-
+function removePassword(object){
+  delete key.object['password'];
+}
+removePassword(object);
 //Code Here
 
 
@@ -128,7 +152,12 @@ var deleteTheBigNumbers = {
 /*
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
-
+for(let key in deleteTheBigNumbers){
+if (deleteTheBigNumbers.key>'100'){
+  delete deleteTheBigNumbers.key;
+}
+return deleteTheBigNumbers;
+}
 //Code Here
 
 
@@ -141,7 +170,14 @@ var deleteTheBigNumbers = {
   If any property name starts with k, delete that property.
   Return the updated object.
 */
+function startsWithK(object){
+  for(let key in object){
+    if (object.include('s')){
+      delete object.key;
 
+    }
+  }
+}
 //Code Here
 
 
@@ -157,6 +193,15 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
+function hiddenTreasure(object){
+  for (let key in oject){
+    if(oject.key.filter('treasure'))
+    {
+      delete object.key;
+    }
+  }
+return object.key;
+}
 //Code Here
 
 
